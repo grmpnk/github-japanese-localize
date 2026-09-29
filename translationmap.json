@@ -1,16 +1,16 @@
 {
   "map": [
     {
-      "selector": '[data-content="Code"]',
+      "selector": "[data-content=\"Code\"]",
       "text": {
         "Code": "コード"
       }
     },
     {
-      "selector": '[data-content="Issues"]',
+      "selector": "[data-content=\"Issues\"]",
       "text": {
         "Issues": "問題"
       }
-    },
+    }
   ]
 }
