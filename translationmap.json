@@ -1,38 +1,42 @@
 {
   "map": [
-    { "selector": "[data-content=\"Code\"]", "text": { "Code": "コード" }},{
-      "selector": "[data-content=\"Issues\"]", "text": { "Issues": "問題" }},{
-      "selector": "[data-content=\"Pull requests\"]", "text": { "Pull requests": "プルリクエスト" }},{
-      "selector": "[data-content=\"Agents\"]", "text": { "Agents": "エージェント" }},{
-      "selector": "[data-content=\"Actions\"]", "text": { "Actions": "アクション" }},{
-      "selector": "[data-content=\"Projects\"]", "text": { "Projects": "プロジェクト" }},{
-      "selector": "[data-content=\"Security and quality\"]", "text": { "Security and quality": "安全と品質" }},{
-      "selector": "[data-content=\"Insights\"]", "text": { "Insights": "分析" }},{
-      "selector": "[data-content=\"Settings\"]", "text": { "Settings": "設定" }},{
-      "selector": "[data-content=\"Overview\"]", "text": { "Overview": "概要" }},{
-      "selector": "[data-content=\"Repositories\"]", "text": { "Repositories": "リポジトリ" }},{
-      "selector": "[data-content=\"Packages\"]", "text": { "Packages": "パッケージ" }},{
-      "selector": "[data-content=\"Stars\"]", "text": { "Stars": "スター" }},{
-      "selector": "[data-content=\"Discussions\"]", "text": { "Discussions": "議論" }},{
-      "selector": ".ActionListItem-label", "text": { "Public profile": "公開プロフィール" }},{
-      "selector": ".ActionListItem-label", "text": { "Account": "アカウント" }},{
-      "selector": ".ActionListItem-label", "text": { "Appearance": "外観" }},{
-      "selector": ".ActionListItem-label", "text": { "Accessibility": "アクセシビリティ" }},{
-      "selector": ".ActionListItem-label", "text": { "Notifications": "通知" }},{
-      "selector": ".ActionListItem-label", "text": { "Billing and licensing": "請求とライセンス" }},{
-      "selector": ".ActionListItem-label", "text": { "Emails": "メール" }},{
-      "selector": ".ActionListItem-label", "text": { "Password and authentication": "パスワードと認証" }},{
-      "selector": ".ActionListItem-label", "text": { "Sessions": "セッション" }},{
-      "selector": ".ActionListItem-label", "text": { "SSH and GPG keys": "SSHとGPGキー" }},{
-      "selector": ".ActionListItem-label", "text": { "Credentials": "経歴" }},{
-      "selector": ".ActionListItem-label", "text": { "Organizations": "組織/団体" }},{
-      "selector": ".ActionListItem-label", "text": { "Enterprises": "企業" }},{
-      "selector": ".ActionListItem-label", "text": { "Moderation": "モデレーション" }},{
-      "selector": ".ActionListItem-label", "text": { "Repositories": "リポジトリ" }},{
-      "selector": ".ActionListItem-label", "text": { "Codespaces": "コードスペース" }},{
-      "selector": ".ActionListItem-label", "text": { "Packages": "パッケージ" }},{
-      "selector": ".ActionListItem-label", "text": { "Pages": "ページ" }},{
-      "selector": ".ActionListItem-label", "text": { "Saved replies": "保存された返信" }
+    { "selector": "[data-content=\"Code\"]", "text": { "Code": "コード" } },
+    { "selector": "[data-content=\"Issues\"]", "text": { "Issues": "問題" } },
+    { "selector": "[data-content=\"Pull requests\"]", "text": { "Pull requests": "プルリクエスト" } },
+    { "selector": "[data-content=\"Agents\"]", "text": { "Agents": "エージェント" } },
+    { "selector": "[data-content=\"Actions\"]", "text": { "Actions": "アクション" } },
+    { "selector": "[data-content=\"Projects\"]", "text": { "Projects": "プロジェクト" } },
+    { "selector": "[data-content=\"Security and quality\"]", "text": { "Security and quality": "安全と品質" } },
+    { "selector": "[data-content=\"Insights\"]", "text": { "Insights": "分析" } },
+    { "selector": "[data-content=\"Settings\"]", "text": { "Settings": "設定" } },
+    { "selector": "[data-content=\"Overview\"]", "text": { "Overview": "概要" } },
+    { "selector": "[data-content=\"Repositories\"]", "text": { "Repositories": "リポジトリ" } },
+    { "selector": "[data-content=\"Packages\"]", "text": { "Packages": "パッケージ" } },
+    { "selector": "[data-content=\"Stars\"]", "text": { "Stars": "スター" } },
+    { "selector": "[data-content=\"Discussions\"]", "text": { "Discussions": "議論" } },
+    {
+      "selector": ".ActionListItem-label",
+      "text": {
+        "Public profile": "公開プロフィール",
+        "Account": "アカウント",
+        "Appearance": "外観",
+        "Accessibility": "アクセシビリティ",
+        "Notifications": "通知",
+        "Billing and licensing": "請求とライセンス",
+        "Emails": "メール",
+        "Password and authentication": "パスワードと認証",
+        "Sessions": "セッション",
+        "SSH and GPG keys": "SSHとGPGキー",
+        "Credentials": "経歴",
+        "Organizations": "組織/団体",
+        "Enterprises": "企業",
+        "Moderation": "モデレーション",
+        "Repositories": "リポジトリ",
+        "Codespaces": "コードスペース",
+        "Packages": "パッケージ",
+        "Pages": "ページ",
+        "Saved replies": "保存された返信"
+      }
     }
   ]
 }
