@@ -56,6 +56,22 @@
         "Code review limits": "レビュー制限",
         "Features": "特徴",
         "Cloud agent": "クラウドエージェント"
+      }, 
+      {
+        "selector": "[data-component=\"ActionList.Item.Label\"]",
+        "text": {
+          "Profile": "プロフィール",
+          "Repositories": "リポジトリ",
+          "Stars": "スター",
+          "Organizations": "組織/団体",
+          "Enterprises": "企業",
+          "Sponsors": "スポンサー",
+          "Copilot settings": "Copilot設定",
+          "Appearance": "外観",
+          "Accessibility": "アクセシビリティ",
+          "Try Enterprise": "エンタープライズ版を試す",
+          "Sign out": "サインアウト"
+        }
       }
     }
   ]
