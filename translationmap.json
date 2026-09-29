@@ -75,6 +75,42 @@
     {
       "selector": ".ActionListItem-label",
       "text": { "Notifications": "通知" }
+    },
+    {
+      "selector": ".ActionListItem-label",
+      "text": { "Billing and licensing": "請求とライセンス" }
+    },
+    {
+      "selector": ".ActionListItem-label",
+      "text": { "Emails": "メール" }
+    },
+    {
+      "selector": ".ActionListItem-label",
+      "text": { "Password and authentication": "パスワードと認証" }
+    },
+    {
+      "selector": ".ActionListItem-label",
+      "text": { "Sessions": "セッション" }
+    },
+    {
+      "selector": ".ActionListItem-label",
+      "text": { "SSH and GPG keys": "SSHとGPGキー" }
+    },
+    {
+      "selector": ".ActionListItem-label",
+      "text": { "Credentials": "経歴" }
+    },
+    {
+      "selector": ".ActionListItem-label",
+      "text": { "Organizations": "組織/団体" }
+    },
+    {
+      "selector": ".ActionListItem-label",
+      "text": { "Enterprises": "企業" }
+    },
+    {
+      "selector": ".ActionListItem-label",
+      "text": { "Moderation": "モデレーション" }
     }
   ]
 }
