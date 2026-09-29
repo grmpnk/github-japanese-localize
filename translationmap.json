@@ -41,7 +41,16 @@
         "Scheduled reminders": "予定されたリマインダー",
         "Security log": "セキュリティログ",
         "Sponsorship log": "スポンサーログ",
-        "Developer settings": "開発者設定"
+        "Developer settings": "開発者設定",
+        "Overview": "概要",
+        "Usage": "利用状況",
+        "AI usage": "AIの利用状況",
+        "Budgets and alerts": "予算とアラート",
+        "Licensing": "ライセンス",
+        "Payment information": "決済情報",
+        "Payment history": "支払い履歴",
+        "Additional billing details": "追加の請求詳細情報",
+        "Education benefits": "学生・教育機関向けの特典"
       }
     }
   ]
