@@ -56,9 +56,10 @@
         "Code review limits": "レビュー制限",
         "Features": "特徴",
         "Cloud agent": "クラウドエージェント"
-      }, 
-      {
-        "selector": "[data-component=\"ActionList.Item.Label\"]",
+      }
+    }, 
+    {
+     "selector": "[data-component=\"ActionList.Item.Label\"]",
         "text": {
           "Profile": "プロフィール",
           "Repositories": "リポジトリ",
@@ -72,7 +73,6 @@
           "Try Enterprise": "エンタープライズ版を試す",
           "Sign out": "サインアウト"
         }
-      }
-    }
+     }
   ]
 }
