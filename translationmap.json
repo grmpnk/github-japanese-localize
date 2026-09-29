@@ -49,8 +49,24 @@
       "text": { "Packages": "パッケージ" }
     },
     {
-      "selector": "[data-content=\"Stars\"]",
-      "text": { "Stars": "スター" }
+      "selector": "ActionListItem-label",
+      "text": { "Public profile": "公開プロフィール" }
+    },
+    {
+      "selector": "ActionListItem-label",
+      "text": { "Account": "アカウント" }
+    },
+    {
+      "selector": "ActionListItem-label",
+      "text": { "Appearance": "外観" }
+    },
+    {
+      "selector": "ActionListItem-label",
+      "text": { "Accessibility": "アクセシビリティ" }
+    },
+    {
+      "selector": "ActionListItem-label",
+      "text": { "Notifications": "通知" }
     }
   ]
 }
