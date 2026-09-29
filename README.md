@@ -10,7 +10,7 @@
 
 3. **日本語化プラグイン をインストールする**  
    次のリンクを開いてインストールしてください。  
-   [ここからインストールする](https://github.com/grmpnk/github-japanese-localize/raw/refs/heads/main/userscript.user.js)
+   [ここからインストール](https://github.com/grmpnk/github-japanese-localize/raw/refs/heads/main/userscript.user.js)
 
 4. **インストール後の確認**   
    GitHub を開いて日本語化が適用されているか確認します。適用されない場合はブラウザをリロードしてください。
