@@ -1,4 +1,4 @@
-### インストール方法
+# インストール方法
 
 1. **Tampermonkey をインストールする**  
    - Chrome : [Tampermonkey](https://chromewebstore.google.com/detail/tampermonkey-%E3%83%99%E3%83%BC%E3%82%BF%E7%89%88/gcalenpjmijncebpfijmoaglllgpjagf)
