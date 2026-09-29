@@ -6,7 +6,7 @@
 // @author       grmpneko
 // @match        https://github.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=github.com
-// @resource     translationmap https://raw.githubusercontent.com/grmpnk/github-japanese-localize/refs/heads/main/translationmap.json
+// @resource     translationmap https://raw.githubusercontent.com/grmpnk/github-japanese-localize/refs/heads/main/translationmap.json?token=GHSAT0AAAAAAEKQWAIEWY5RX27VXQ7OJI242V4E4UQ
 // @grant        GM_getResourceText
 // ==/UserScript==
 (() => {
@@ -16,11 +16,31 @@
         console.error('translationmap resource is missing or empty')
         return;
     }
-    let maps;
+    let maps = [];
     try {
-        const cfg = JSON.parse(raw);
-        maps = (cfg.map || []).map(({ selector, text }) => ({ selector, text: text || {} }));
-    } catch {
+        const cfg = JSON.parse(raw || '{}');
+        // JSON 側で既定セレクタを指定する。無ければ undefined のままにする
+        const globalDefault = cfg.defaultSelector && cfg.defaultSelector.trim() ? cfg.defaultSelector.trim() : undefined;
+        // 既存の互換 map を処理する
+        (cfg.map || []).forEach(entry => {
+            const sel = entry.selector && entry.selector.trim() ? entry.selector.trim() : globalDefault;
+            maps.push({ selector: sel, text: entry.text || {} });
+        });
+        // mapBySelector を処理して texts を展開
+        (cfg.mapBySelector || []).forEach(block => {
+            const sel = block.selector && block.selector.trim() ? block.selector.trim() : globalDefault;
+            const texts = block.texts || block.texts === undefined ? block.texts : {};
+            // texts が配列形式の場合にも対応する
+            if (Array.isArray(block.texts)) {
+                block.texts.forEach(t => maps.push({ selector: sel, text: t || {} }));
+            } else {
+                maps.push({ selector: sel, text: texts || {} });
+            }
+        });
+        // 最後に、selector が undefined のエントリは document 全体に適用するため selector を null にしておく
+        maps = maps.map(m => ({ selector: m.selector === undefined ? null : m.selector, text: m.text }));
+    } catch (e) {
+        maps = [];
     }
 
     const replaceTextNode = (node, from, to) => {
