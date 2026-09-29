@@ -2,15 +2,39 @@
   "map": [
     {
       "selector": "[data-content=\"Code\"]",
-      "text": {
-        "Code": "コード"
-      }
+      "text": { "Code": "コード" }
     },
     {
       "selector": "[data-content=\"Issues\"]",
-      "text": {
-        "Issues": "問題"
-      }
-    }
+      "text": { "Issues": "問題" }
+    },
+    {
+      "selector": "[data-content=\"Pull requests\"]",
+      "text": { "Pull requests": "プルリクエスト" }
+    },
+    {
+      "selector": "[data-content=\"Agents\"]",
+      "text": { "Agents": "エージェント" }
+    },
+    {
+      "selector": "[data-content=\"Actions\"]",
+      "text": { "Actions": "アクション" }
+    },
+    {
+      "selector": "[data-content=\"Projects\"]",
+      "text": { "Projects": "プロジェクト" }
+    },
+    {
+      "selector": "[data-content=\"Security and quality\"]",
+      "text": { "Security and quality": "安全と品質" }
+    },
+    {
+      "selector": "[data-content=\"Insights\"]",
+      "text": { "Insights": "分析" }
+    },
+    {
+      "selector": "[data-content=\"Settings\"]",
+      "text": { "Code": "設定" }
+    },
   ]
 }
