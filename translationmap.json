@@ -35,6 +35,6 @@
     {
       "selector": "[data-content=\"Settings\"]",
       "text": { "Code": "設定" }
-    },
+    }
   ]
 }
