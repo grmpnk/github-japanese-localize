@@ -53,6 +53,10 @@
       "text": { "Stars": "スター" }
     },
     {
+      "selector": "[data-content=\"Discussions\"]",
+      "text": { "Discussions": "議論" }
+    },
+    {
       "selector": ".ActionListItem-label",
       "text": { "Public profile": "公開プロフィール" }
     },
