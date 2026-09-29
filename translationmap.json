@@ -35,6 +35,22 @@
     {
       "selector": "[data-content=\"Settings\"]",
       "text": { "Settings": "設定" }
+    },
+    {
+      "selector": "[data-content=\"Overview\"]",
+      "text": { "Overview": "概要" }
+    },
+    {
+      "selector": "[data-content=\"Repositories\"]",
+      "text": { "Repositories": "リポジトリ" }
+    },
+    {
+      "selector": "[data-content=\"Packages\"]",
+      "text": { "Packages": "パッケージ" }
+    },
+    {
+      "selector": "[data-content=\"Stars\"]",
+      "text": { "Stars": "スター" }
     }
   ]
 }
