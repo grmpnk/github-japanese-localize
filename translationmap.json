@@ -51,9 +51,11 @@
         "Payment history": "支払い履歴",
         "Additional billing details": "追加の請求詳細情報",
         "Education benefits": "学生・教育機関向けの特典",
-        "Blocked users": "ブロックユーザー",,
-        "Interaction limits": "使用制限",,
+        "Blocked users": "ブロックユーザー",
+        "Interaction limits": "使用制限",
         "Code review limits": "レビュー制限",
+        "Features": "特徴",
+        "Cloud agent": "クラウドエージェント"
       }
     }
   ]
