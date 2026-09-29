@@ -6,7 +6,7 @@
 // @author       grmpneko
 // @match        https://github.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=github.com
-// @resource     translationmap https://raw.githubusercontent.com/grmpnk/github-japanese-localize/refs/heads/main/translationmap.json?token=GHSAT0AAAAAAEKQWAIEWY5RX27VXQ7OJI242V4E4UQ
+// @resource     translationmap https://raw.githubusercontent.com/grmpnk/github-japanese-localize/refs/heads/main/translationmap.json
 // @grant        GM_getResourceText
 // ==/UserScript==
 (() => {
