@@ -34,7 +34,7 @@
     },
     {
       "selector": "[data-content=\"Settings\"]",
-      "text": { "Code": "設定" }
+      "text": { "Settings": "設定" }
     }
   ]
 }
