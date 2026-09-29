@@ -111,6 +111,26 @@
     {
       "selector": ".ActionListItem-label",
       "text": { "Moderation": "モデレーション" }
+    },
+    {
+      "selector": ".ActionListItem-label",
+      "text": { "Repositories": "リポジトリ" }
+    },
+    {
+      "selector": ".ActionListItem-label",
+      "text": { "Codespaces": "コードスペース" }
+    },
+    {
+      "selector": ".ActionListItem-label",
+      "text": { "Packages": "パッケージ" }
+    },
+    {
+      "selector": ".ActionListItem-label",
+      "text": { "Pages": "ページ" }
+    },
+    {
+      "selector": ".ActionListItem-label",
+      "text": { "Saved replies": "保存された返信" }
     }
   ]
 }
