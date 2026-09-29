@@ -35,7 +35,13 @@
         "Codespaces": "コードスペース",
         "Packages": "パッケージ",
         "Pages": "ページ",
-        "Saved replies": "保存された返信"
+        "Saved replies": "保存された返信",
+        "Code security": "セキュリティコード",
+        "Applications": "アプリケーション",
+        "Scheduled reminders": "予定されたリマインダー",
+        "Security log": "セキュリティログ",
+        "Sponsorship log": "スポンサーログ",
+        "Developer settings": "開発者設定"
       }
     }
   ]
