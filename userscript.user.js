@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         GitHub 日本語化プラグイン
 // @namespace    https://github.com/grmpnk
-// @version      1.0
+// @version      1.1
 // @description  誤訳を見つけたら教えてください。まだ作業中のため、未翻訳の報告は受け付けていません。
 // @author       grmpneko
 // @match        https://github.com/*
@@ -12,36 +12,29 @@
 (() => {
     'use strict';
     const raw = GM_getResourceText('translationmap');
-    if (!raw) {
-        console.error('translationmap resource is missing or empty')
-        return;
-    }
+    if (!raw) return;
     let maps = [];
     try {
         const cfg = JSON.parse(raw || '{}');
-        // JSON 側で既定セレクタを指定する。無ければ undefined のままにする
         const globalDefault = cfg.defaultSelector && cfg.defaultSelector.trim() ? cfg.defaultSelector.trim() : undefined;
-        // 既存の互換 map を処理する
         (cfg.map || []).forEach(entry => {
             const sel = entry.selector && entry.selector.trim() ? entry.selector.trim() : globalDefault;
             maps.push({ selector: sel, text: entry.text || {} });
         });
-        // mapBySelector を処理して texts を展開
         (cfg.mapBySelector || []).forEach(block => {
             const sel = block.selector && block.selector.trim() ? block.selector.trim() : globalDefault;
-            const texts = block.texts || block.texts === undefined ? block.texts : {};
-            // texts が配列形式の場合にも対応する
             if (Array.isArray(block.texts)) {
                 block.texts.forEach(t => maps.push({ selector: sel, text: t || {} }));
             } else {
-                maps.push({ selector: sel, text: texts || {} });
+                maps.push({ selector: sel, text: block.texts || {} });
             }
         });
-        // 最後に、selector が undefined のエントリは document 全体に適用するため selector を null にしておく
-        maps = maps.map(m => ({ selector: m.selector === undefined ? null : m.selector, text: m.text }));
+        maps = maps.map((m, i) => ({ selector: m.selector === undefined ? null : m.selector, text: m.text, id: i }));
     } catch (e) {
         maps = [];
     }
+
+    const appliedMaps = new WeakMap();//重複処理を避け、負荷を下げる
 
     const replaceTextNode = (node, from, to) => {
         if (!node || node.nodeType !== Node.TEXT_NODE) return;
@@ -50,8 +43,23 @@
         else if (v.includes(from)) node.nodeValue = v.split(from).join(to);
     };
 
-    const translateElement = (el, textMap) => {
+    const hasApplied = (el, id) => {
+        const s = appliedMaps.get(el);
+        return s && s.has(id);
+    };
+
+    const markApplied = (el, id) => {
+        let s = appliedMaps.get(el);
+        if (!s) {
+            s = new Set();
+            appliedMaps.set(el, s);
+        }
+        s.add(id);
+    };
+
+    const translateElement = (el, textMap, mapId, force) => {
         if (!el || !textMap) return;
+        if (!force && hasApplied(el, mapId)) return;
         if (el.hasAttribute && el.hasAttribute('data-content')) {
             const dc = el.getAttribute('data-content');
             if (dc && textMap[dc]) {
@@ -67,15 +75,23 @@
             if (el.getAttribute && el.getAttribute('aria-label') === from) el.setAttribute('aria-label', to);
             if (el.title === from) el.title = to;
         }
+        markApplied(el, mapId);
     };
 
     const walkAndTranslate = root => {
         if (!root) return;
-        for (const { selector, text } of maps) {
+        for (const { selector, text, id } of maps) {
             try {
-                const nodes = root.querySelectorAll ? root.querySelectorAll(selector) : [];
-                nodes.forEach(n => translateElement(n, text));
-            } catch {}
+                let nodes = [];
+                if (selector === null) {
+                    nodes = root.querySelectorAll ? root.querySelectorAll('*') : [];
+                } else {
+                    nodes = root.querySelectorAll ? root.querySelectorAll(selector) : [];
+                }
+                nodes.forEach(n => translateElement(n, text, id, false));
+                if (selector !== null && root.matches && root.matches(selector)) translateElement(root, text, id, false);
+                if (selector === null && root.nodeType === Node.ELEMENT_NODE) translateElement(root, text, id, false);
+            } catch (e) {}
         }
         const w = document.createTreeWalker(root, NodeFilter.SHOW_ELEMENT);
         let n;
@@ -83,42 +99,62 @@
     };
 
     const findTextMap = el => {
-        for (const { selector, text } of maps) {
+        for (const { selector, text, id } of maps) {
             try {
-                if (el.matches && el.matches(selector)) return text;
+                if (selector === null) return { text, id };
+                if (el.matches && el.matches(selector)) return { text, id };
             } catch {}
         }
         return null;
     };
 
     const init = () => walkAndTranslate(document);
-    setTimeout(init, 100);
+    init();
 
-    let scheduled = 0;
     const obs = new MutationObserver(ms => {
-        if (scheduled) return;
-        scheduled = requestAnimationFrame(() => {
-            scheduled = 0;
-            for (const m of ms) {
-                if (m.type === 'childList') {
-                    m.addedNodes.forEach(node => {
-                        if (node.nodeType === Node.ELEMENT_NODE) {
-                            walkAndTranslate(node);
-                            if (node.shadowRoot) walkAndTranslate(node.shadowRoot);
+        for (const m of ms) {
+            if (m.type === 'childList') {
+                m.addedNodes.forEach(node => {
+                    if (node.nodeType === Node.ELEMENT_NODE) {
+                        walkAndTranslate(node);
+                        if (node.shadowRoot) walkAndTranslate(node.shadowRoot);
+                    } else if (node.nodeType === Node.TEXT_NODE) {
+                        const p = node.parentElement;
+                        if (p) {
+                            const found = findTextMap(p);
+                            if (found) translateElement(p, found.text, found.id, false);
                         }
-                    });
-                } else if (m.type === 'attributes' && m.attributeName === 'data-content') {
-                    translateElement(m.target, findTextMap(m.target));
+                    }
+                });
+            } else if (m.type === 'attributes') {
+                const target = m.target;
+                if (target && target.nodeType === Node.ELEMENT_NODE) {
+                    const attr = m.attributeName;
+                    if (attr === 'data-content') {
+                        const found = findTextMap(target);
+                        if (found) translateElement(target, found.text, found.id, true);
+                    } else {
+                        const found = findTextMap(target);
+                        if (found) translateElement(target, found.text, found.id, false);
+                        walkAndTranslate(target);
+                        if (target.shadowRoot) walkAndTranslate(target.shadowRoot);
+                    }
                 }
             }
-        });
+        }
     });
 
-    obs.observe(document.documentElement || document, { childList: true, subtree: true, attributes: true, });
+    obs.observe(document.documentElement, {
+        childList: true,
+        subtree: true,
+        attributes: true,
+        attributeFilter: ['data-content','class'],
+        attributeOldValue: true
+    });
 
     const _push = history.pushState;
-    history.pushState = function () { _push.apply(this, arguments); setTimeout(init, 200); };
+    history.pushState = function () { _push.apply(this, arguments); init(); };
     const _replace = history.replaceState;
-    history.replaceState = function () { _replace.apply(this, arguments); setTimeout(init, 200); };
-    window.addEventListener('popstate', () => setTimeout(init, 200));
+    history.replaceState = function () { _replace.apply(this, arguments); init(); };
+    window.addEventListener('popstate', () => init());
 })();
