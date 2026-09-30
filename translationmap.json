@@ -138,13 +138,30 @@
     {
       "selector": "[data-view-component]",
       "text": {
-        "Public profile": "公開プロフィール"
+        "Public profile": "公開プロフィール",
+        "Contributions & activity": "貢献と活動",
+        "Profile settings": "プロフィール設定",
+        "GitHub Developer Program": "GitHub開発者プログラム",
+        "Jobs profile": "求人プロフィール",
+        "Trending settings": "トレンド設定"
       }
     },
     {
       "selector": "label",
       "text": {
-        "Name": "名前"
+        "Name": "名前",
+        "Public email": "公開メール",
+        "Bio": "プロフィール",
+        "Pronouns": "代名詞",
+        "Social accounts": "ウェブサイト",
+        "Company": "会社",
+        "Location": "場所",
+        "Display current local time": "現在の現地時刻を表示",
+        "Make profile private and hide activity": "プロフィールを非公開にして、活動を非表示にする",
+        "Include private contributions on my profile": "プロフィールに非公開の貢献を表示する",
+        "Show Achievements on my profile": "プロフィールに実績を表示する",
+        "Available for hire": "仕事の依頼を受け付ける",
+        "Preferred spoken language": "希望する言語"
       }
     }
   ]
