@@ -136,7 +136,7 @@
       }
     },
     {
-      "selector": "[data-view-component]",
+      "selector": ".Subhead-heading.Subhead-heading--large",
       "text": {
         "Contributions & activity": "貢献と活動",
         "Profile settings": "プロフィール設定",
