@@ -70,7 +70,16 @@
         "Deploy keys": "デプロイキー",
         "Secrets and variables": "シークレットと変数",
         "GitHub Apps": "GitHubアプリ",
-        "Email notifications": "メール通知"
+        "Email notifications": "メール通知",
+        "Runners": "ランナー",
+        "Policies": "ポリシー",
+        "Policy insights": "ポリシー分析",
+        "OIDC": "OIDC",
+        "Code review": "コードレビュー",
+        "Internet access": "インターネット接続",
+        "MCP servers": "MCPサーバー",
+        "Agent suggestions for issues": "問題に対するエージェントの提案",
+        "Agents": "エージェント"
       }
     }, 
     {
