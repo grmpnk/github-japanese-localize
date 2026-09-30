@@ -55,7 +55,22 @@
         "Interaction limits": "使用制限",
         "Code review limits": "レビュー制限",
         "Features": "特徴",
-        "Cloud agent": "クラウドエージェント"
+        "Cloud agent": "クラウドエージェント",
+        "Security policy": "セキュリティポリシー",
+        "General": "一般",
+        "Collaborators": "コラボ",
+        "Rulesets": "ルールセット",
+        "Branches": "ブランチ",
+        "Tags": "タグ",
+        "Actions": "アクション",
+        "Webhooks": "ウェブフック",
+        "Planning": "企画",
+        "Environments": "環境",
+        "Advanced Security": "高度なセキュリティ",
+        "Deploy keys": "デプロイキー",
+        "Secrets and variables": "シークレットと変数",
+        "GitHub Apps": "GitHubアプリ",
+        "Email notifications": "メール通知"
       }
     }, 
     {
