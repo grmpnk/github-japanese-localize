@@ -59,7 +59,7 @@
       }
     }, 
     {
-     "selector": "[data-component=\"ActionList.Item.Label\"]",
+     "selector": "[data-component=\"ActionList.Item--DividerContainer\"] > [data-component=\"ActionList.Item.Label\"]",
         "text": {
           "Profile": "プロフィール",
           "Repositories": "リポジトリ",
