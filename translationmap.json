@@ -90,7 +90,12 @@
           "More": "もっと見る",
           "Commits": "変更履歴",
           "Packages": "パッケージ",
-          "Topics": "トピック"
+          "Topics": "トピック",
+          "Views": "閲覧",
+          "Milestones": "マイルストーン",
+          "Labels": "ラベル",
+          "Created by me": "自分が作成したもの",
+          "Needs attention": "対応が必要なもの",
         }
     },
     {
@@ -100,9 +105,9 @@
         "Created by me": "自分が作成したもの",
         "Mentioned": "言及",
         "Recent activity": "最近の活動",
-        "Views": "閲覧",
-        "Milestones": "マイルストーン",
-        "Labels": "ラベル"
+        "Authored by me": "自分が作成したもの",
+        "Involves me": "自分が関与しているもの",
+        "Review requests": "レビュー依頼"
       }
     }
   ]
