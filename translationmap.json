@@ -81,7 +81,16 @@
           "Codespaces": "コードスペース",
           "Explore": "探索",
           "Marketplace": "マーケット",
-          "MCP registry": "MCPレジストリ"
+          "MCP registry": "MCPレジストリ",
+          "Code": "コード",
+          "Issues": "問題",
+          "Pull requests": "プルリクエスト",
+          "Discussions": "議論",
+          "Users": "ユーザー",
+          "More": "もっと見る",
+          "Commits": "変更履歴",
+          "Packages": "パッケージ",
+          "Topics": "トピック",
         }
      }
   ]
