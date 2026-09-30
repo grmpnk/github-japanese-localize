@@ -138,7 +138,6 @@
     {
       "selector": "[data-view-component]",
       "text": {
-        "Public profile": "公開プロフィール",
         "Contributions & activity": "貢献と活動",
         "Profile settings": "プロフィール設定",
         "GitHub Developer Program": "GitHub開発者プログラム",
