@@ -134,6 +134,18 @@
         "Involves me": "自分が関与しているもの",
         "Review requests": "レビュー依頼"
       }
+    },
+    {
+      "selector": "[data-view-component=\"true\"]",
+      "text": {
+        "Public profile": "公開プロフィール"
+      }
+    },
+    {
+      "selector": "label",
+      "text": {
+        "Name": "名前"
+      }
     }
   ]
 }
