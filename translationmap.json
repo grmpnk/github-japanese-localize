@@ -138,11 +138,17 @@
     {
       "selector": ".Subhead-heading.Subhead-heading--large",
       "text": {
+        "Public profile": "公開プロフィール",
         "Contributions & activity": "貢献と活動",
         "Profile settings": "プロフィール設定",
         "GitHub Developer Program": "GitHub開発者プログラム",
         "Jobs profile": "求人プロフィール",
-        "Trending settings": "トレンド設定"
+        "Trending settings": "トレンド設定",
+        "Change username": "名前を変更",
+        "Link Patreon account": "Patreonアカウントを連携する",
+        "Export account data": "アカウントデータをエクスポート",
+        "Successor settings": "引き継ぎ設定",
+        "Delete account": "アカウントを削除"
       }
     },
     {
@@ -160,7 +166,8 @@
         "Include private contributions on my profile": "プロフィールに非公開の貢献を表示する",
         "Show Achievements on my profile": "プロフィールに実績を表示する",
         "Available for hire": "仕事の依頼を受け付ける",
-        "Preferred spoken language": "希望する言語"
+        "Preferred spoken language": "希望する言語",
+        "Search by username, full name, or email address": "ユーザー名、氏名、メールアドレスで検索"
       }
     }
   ]
