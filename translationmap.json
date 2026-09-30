@@ -71,7 +71,17 @@
           "Appearance": "外観",
           "Accessibility": "アクセシビリティ",
           "Try Enterprise": "企業向けプランを試す",
-          "Sign out": "サインアウト"
+          "Sign out": "サインアウト",
+          "Home": "ホーム",
+          "All issues": "すべての問題",
+          "All pull requests": "すべてのプルリクエスト",
+          "All repositories": "すべてのリポジトリ",
+          "Projects": "プロジェクト",
+          "Discussions": "議論",
+          "Codespaces": "コードスペース",
+          "Explore": "探索",
+          "Marketplace": "マーケット",
+          "MCP registry": "MCPレジストリ"
         }
      }
   ]
