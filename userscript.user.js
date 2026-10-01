@@ -1,18 +1,46 @@
 // ==UserScript==
 // @name         GitHub 日本語化プラグイン
 // @namespace    https://github.com/grmpnk
-// @version      1.1
+// @version      1.2
 // @description  誤訳を見つけたら教えてください。まだ作業中のため、未翻訳の報告は受け付けていません。
 // @author       grmpneko
 // @match        https://github.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=github.com
-// @resource     translationmap https://raw.githubusercontent.com/grmpnk/github-japanese-localize/refs/heads/main/translationmap.json
-// @grant        GM_getResourceText
+// @grant        GM_xmlhttpRequest
+// @connect      raw.githubusercontent.com
 // ==/UserScript==
-(() => {
+(async () => {
     'use strict';
-    const raw = GM_getResourceText('translationmap');
+    const TRANSLATION_URL = 'https://raw.githubusercontent.com/grmpnk/github-japanese-localize/refs/heads/main/translationmap.json'
+
+    const fetchText = url => new Promise((resolve, reject) => {
+        try {
+            GM_xmlhttpRequest({
+                method: 'GET',
+                url,
+                responseType: 'text',
+                onload: res => {
+                    if (res.status >= 200 && res.status < 300) resolve(res.responseText);
+                    else reject(new Error('HTTP error: ' + res.status));
+                },
+                onerror: err => reject(err),
+                ontimeout: () => reject(new Error('Request timeout'))
+            });
+        } catch (e) {
+            reject(e);
+        }
+    });
+
+    let raw;
+    try {
+        raw = await fetchText(TRANSLATION_URL);
+    } catch (e) {
+        console.error('translationmap fetch failed:', e);
+        return;
+    }
+
     if (!raw) return;
+
     let maps = [];
     try {
         const cfg = JSON.parse(raw || '{}');
@@ -34,7 +62,7 @@
         maps = [];
     }
 
-    const appliedMaps = new WeakMap();//重複処理を避け、負荷を下げる
+    const appliedMaps = new WeakMap(); // 重複処理を避け、負荷を下げる
 
     const replaceTextNode = (node, from, to) => {
         if (!node || node.nodeType !== Node.TEXT_NODE) return;
@@ -60,6 +88,7 @@
     const translateElement = (el, textMap, mapId, force) => {
         if (!el || !textMap) return;
         if (!force && hasApplied(el, mapId)) return;
+
         if (el.hasAttribute && el.hasAttribute('data-content')) {
             const dc = el.getAttribute('data-content');
             if (dc && textMap[dc]) {
@@ -68,6 +97,7 @@
                 else for (const n of Array.from(el.childNodes)) replaceTextNode(n, dc, textMap[dc]);
             }
         }
+
         for (const [from, to] of Object.entries(textMap)) {
             if (!from) continue;
             for (const n of Array.from(el.childNodes)) replaceTextNode(n, from, to);
@@ -93,6 +123,7 @@
                 if (selector === null && root.nodeType === Node.ELEMENT_NODE) translateElement(root, text, id, false);
             } catch (e) {}
         }
+
         const w = document.createTreeWalker(root, NodeFilter.SHOW_ELEMENT);
         let n;
         while ((n = w.nextNode())) if (n.shadowRoot) walkAndTranslate(n.shadowRoot);
@@ -144,17 +175,19 @@
         }
     });
 
-    obs.observe(document.documentElement, {
-        childList: true,
-        subtree: true,
-        attributes: true,
-        attributeFilter: ['data-content','class'],
-        attributeOldValue: true
-    });
+    obs.observe(document.documentElement, { childList: true, subtree: true, attributes: true, attributeFilter: ['data-content','class'], attributeOldValue: true });
 
     const _push = history.pushState;
-    history.pushState = function () { _push.apply(this, arguments); init(); };
+    history.pushState = function () {
+        _push.apply(this, arguments);
+        init();
+    };
+
     const _replace = history.replaceState;
-    history.replaceState = function () { _replace.apply(this, arguments); init(); };
+    history.replaceState = function () {
+        _replace.apply(this, arguments);
+        init();
+    };
+
     window.addEventListener('popstate', () => init());
 })();
