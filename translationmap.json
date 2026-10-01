@@ -1,19 +1,25 @@
 {
   "map": [
-    { "selector": "[data-content=\"Code\"]", "text": { "Code": "コード" } },
-    { "selector": "[data-content=\"Issues\"]", "text": { "Issues": "問題" } },
-    { "selector": "[data-content=\"Pull requests\"]", "text": { "Pull requests": "プルリクエスト" } },
-    { "selector": "[data-content=\"Agents\"]", "text": { "Agents": "エージェント" } },
-    { "selector": "[data-content=\"Actions\"]", "text": { "Actions": "アクション" } },
-    { "selector": "[data-content=\"Projects\"]", "text": { "Projects": "プロジェクト" } },
-    { "selector": "[data-content=\"Security and quality\"]", "text": { "Security and quality": "安全と品質" } },
-    { "selector": "[data-content=\"Insights\"]", "text": { "Insights": "分析" } },
-    { "selector": "[data-content=\"Settings\"]", "text": { "Settings": "設定" } },
-    { "selector": "[data-content=\"Overview\"]", "text": { "Overview": "概要" } },
-    { "selector": "[data-content=\"Repositories\"]", "text": { "Repositories": "リポジトリ" } },
-    { "selector": "[data-content=\"Packages\"]", "text": { "Packages": "パッケージ" } },
-    { "selector": "[data-content=\"Stars\"]", "text": { "Stars": "スター" } },
-    { "selector": "[data-content=\"Discussions\"]", "text": { "Discussions": "議論" } },
+    {
+    "selector": "[data-content]",
+      "text": {
+        "Code": "コード",
+        "Issues": "問題",
+        "Pull requests": "プルリクエスト",
+        "Agents": "エージェント",
+        "Actions": "アクション",
+        "Projects": "プロジェクト",
+        "Security and quality": "安全と品質",
+        "Insights": "分析",
+        "Settings": "設定",
+        "Overview": "概要",
+        "Repositories": "リポジトリ",
+        "Packages": "パッケージ",
+        "Stars": "スター",
+        "Discussions": "議論",
+        "More": "もっと見る"
+      }
+    },
     {
       "selector": ".ActionListItem-label",
       "text": {
@@ -84,7 +90,7 @@
     }, 
     {
      "selector": "[data-component=\"ActionList.Item.Label\"]",
-        "text": {
+      "text": {
           "Profile": "プロフィール",
           "Repositories": "リポジトリ",
           "Stars": "スター",
@@ -136,7 +142,7 @@
       }
     },
     {
-      "selector": ".Subhead-heading.Subhead-heading--large",
+      "selector": "h2,h3,h4",
       "text": {
         "Public profile": "公開プロフィール",
         "Contributions & activity": "貢献と活動",
@@ -148,7 +154,41 @@
         "Link Patreon account": "Patreonアカウントを連携する",
         "Export account data": "アカウントデータをエクスポート",
         "Successor settings": "引き継ぎ設定",
-        "Delete account": "アカウントを削除"
+        "Delete account": "アカウントを削除",
+        "Theme preferences": "テーマ設定",
+        "Theme mode": "テーマモード",
+        "Contrast": "コントラスト",
+        "Emoji skin tone preference": "絵文字の肌の色",
+        "Tab size preference": "タブのサイズ設定",
+        "Markdown editor font preference": "Markdown エディタのフォント設定",
+        "Accessibility": "アクセシビリティ",
+        "Keyboard shortcuts": "ショートカット",
+        "General": "概要",
+        "Motion": "モーション",
+        "Autoplay animated images": "アニメーションの自動再生",
+        "Accessibility": "アクセシビリティ",
+        "Hovercards": "ホバーカード",
+        "URL paste behavior": "URLの貼り付け動作",
+        "Editor settings": "エディタの設定",
+        "URL paste behavior": "URLの貼り付け動作",
+        "Assistive technology hints": "補助技術のヒント",
+        "Content": "コンテンツ",
+        "Link underlines": "リンクの下線を強調する",
+        "Notifications": "通知",
+        "Default notifications email": "デフォルトの通知メール",
+        "Subscriptions": "サブスクリプション",
+        "Watching": "ウォッチ対象",
+        "Participating, @mentions and custom": "参加中、@メンション、カスタム",
+        "Customize email updates": "メール通知の設定をカスタマイズする",
+        "Ignored repositories": "無視対象のリポジトリ",
+        "System": "システム",
+        "Actions": "アクション",
+        "Dependabot alerts: New vulnerabilities": "Dependabotのアラート：新たな脆弱性",
+        "Dependabot alerts: Email digest": "Dependabotのアラート：メールダイジェスト",
+        "Security campaign emails": "セキュリティ啓発キャンペーンのメール",
+        "Agent sessions": "エージェントセッション",
+        "'Deploy key' alert email": "「デプロイキー」のアラートメール",
+        "In-product messages": "製品内メッセージ"
       }
     },
     {
@@ -167,7 +207,18 @@
         "Show Achievements on my profile": "プロフィールに実績を表示する",
         "Available for hire": "仕事の依頼を受け付ける",
         "Preferred spoken language": "希望する言語",
-        "Search by username, full name, or email address": "ユーザー名、氏名、メールアドレスで検索"
+        "Search by username, full name, or email address": "ユーザー名、氏名、メールアドレスで検索",
+        "Character keys": "ショートカットを許可する",
+        "Sync with system": "同期",
+        "Enabled": "有効",
+        "Disabled": "無効",
+        "Hide link underlines": "無効",
+        "Show link underlines": "有効",
+        "Show hovercards": "有効",
+        "Formatted link": "書式付きリンク",
+        "Plain text": "プレーンテキスト",
+        "Enable screen reader hint": "スクリーンリーダーのヒントを有効にする",
+        "Disable screen reader hint": "スクリーンリーダーのヒントを無効にする"
       }
     }
   ]
