@@ -16,8 +16,7 @@
         "Repositories": "リポジトリ",
         "Packages": "パッケージ",
         "Stars": "スター",
-        "Discussions": "議論",
-        "More": "もっと見る"
+        "Discussions": "議論"
       }
     },
     {
@@ -142,38 +141,11 @@
       }
     },
     {
-      "selector": "h2,h3,h4",
+      "selector": "h1[data-component],h2[data-component],h3[data-component],h4[data-component]",
       "text": {
-        "Public profile": "公開プロフィール",
-        "Contributions & activity": "貢献と活動",
-        "Profile settings": "プロフィール設定",
-        "GitHub Developer Program": "GitHub開発者プログラム",
-        "Jobs profile": "求人プロフィール",
-        "Trending settings": "トレンド設定",
-        "Change username": "名前を変更",
-        "Link Patreon account": "Patreonアカウントを連携する",
-        "Export account data": "アカウントデータをエクスポート",
-        "Successor settings": "引き継ぎ設定",
-        "Delete account": "アカウントを削除",
         "Theme preferences": "テーマ設定",
         "Theme mode": "テーマモード",
         "Contrast": "コントラスト",
-        "Emoji skin tone preference": "絵文字の肌の色",
-        "Tab size preference": "タブのサイズ設定",
-        "Markdown editor font preference": "Markdown エディタのフォント設定",
-        "Accessibility": "アクセシビリティ",
-        "Keyboard shortcuts": "ショートカット",
-        "General": "概要",
-        "Motion": "モーション",
-        "Autoplay animated images": "アニメーションの自動再生",
-        "Accessibility": "アクセシビリティ",
-        "Hovercards": "ホバーカード",
-        "URL paste behavior": "URLの貼り付け動作",
-        "Editor settings": "エディタの設定",
-        "URL paste behavior": "URLの貼り付け動作",
-        "Assistive technology hints": "補助技術のヒント",
-        "Content": "コンテンツ",
-        "Link underlines": "リンクの下線を強調する",
         "Notifications": "通知",
         "Default notifications email": "デフォルトの通知メール",
         "Subscriptions": "サブスクリプション",
@@ -188,7 +160,48 @@
         "Security campaign emails": "セキュリティ啓発キャンペーンのメール",
         "Agent sessions": "エージェントセッション",
         "'Deploy key' alert email": "「デプロイキー」のアラートメール",
-        "In-product messages": "製品内メッセージ"
+        "In-product messages": "製品内メッセージ",
+        "Overview": "概要",
+        "Subscriptions": "サブスクリプション",
+        "Metered usage": "従量制",
+        "Usage by products": "製品別の使用状況",
+        "Usage breakdown": "利用状況の内訳",
+        "Budgets and alerts": "予算とアラート"
+      }
+    },
+    {
+      "selector": "h2[data-view-component],h3[data-view-component],h4[data-view-component]",
+      "text": {
+        "Public profile": "公開プロフィール",
+        "Contributions & activity": "貢献と活動",
+        "Profile settings": "プロフィール設定",
+        "GitHub Developer Program": "GitHub開発者プログラム",
+        "Jobs profile": "求人プロフィール",
+        "Trending settings": "トレンド設定",
+        "Change username": "名前を変更",
+        "Link Patreon account": "Patreonアカウントを連携する",
+        "Export account data": "アカウントデータをエクスポート",
+        "Successor settings": "引き継ぎ設定",
+        "Delete account": "アカウントを削除",
+        "Emoji skin tone preference": "絵文字の肌の色",
+        "Tab size preference": "タブのサイズ設定",
+        "Markdown editor font preference": "Markdown エディタのフォント設定",
+        "Accessibility": "アクセシビリティ",
+        "Hovercards": "ホバーカード",
+        "URL paste behavior": "URLの貼り付け動作",
+        "Editor settings": "エディタの設定",
+        "URL paste behavior": "URLの貼り付け動作",
+        "Assistive technology hints": "補助技術のヒント",
+        "Keyboard shortcuts": "ショートカット",
+        "General": "概要",
+        "Motion": "モーション",
+        "Autoplay animated images": "アニメーションの自動再生",
+        "Content": "コンテンツ",
+        "Link underlines": "リンクの下線を強調する",
+        "Licensing": "ライセンス",
+        "Current GitHub base plan": "現在のGitHubの基本プラン",
+        "Payment information": "お支払いに関する情報",
+        "Additional information": "補足情報"
       }
     },
     {
@@ -218,7 +231,10 @@
         "Formatted link": "書式付きリンク",
         "Plain text": "プレーンテキスト",
         "Enable screen reader hint": "スクリーンリーダーのヒントを有効にする",
-        "Disable screen reader hint": "スクリーンリーダーのヒントを無効にする"
+        "Disable screen reader hint": "スクリーンリーダーのヒントを無効にする",
+        "First name": "名前",
+        "Last name": "名字",
+        "Address": "住所"
       }
     }
   ]
