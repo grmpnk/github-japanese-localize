@@ -137,7 +137,18 @@
           "New organization": "組織の新規作成",
           "New project": "プロジェクトの新規作成",
           "My sessions": "自分のセッション",
-          "Automations": "自動化"
+          "Automations": "自動化",
+          "Best match": "最も一致するもの",
+          "Most stars": "スター数が最も多い",
+          "Fewest stars": "スター数が最も少ない",
+          "Most forks": "フォーク数が最も多い",
+          "Fewest forks": "フォーク数が最も少ない",
+          "Recently updated": "最近更新された",
+          "Least recently updated": "最も長く更新されていない",
+          "View search docs": "検索ドキュメントを表示",
+          "Give feedback": "フィードバックを送る",
+          "Advanced search": "詳細検索",
+          "Participating and @mentions": "参加中と@mentions"
         }
     },
     {
@@ -178,11 +189,13 @@
         "Metered usage": "従量制",
         "Usage by products": "製品別の使用状況",
         "Usage breakdown": "利用状況の内訳",
-        "Budgets and alerts": "予算とアラート"
+        "Budgets and alerts": "予算とアラート",
+        "Getting started": "使い方",
+        "Repository access": "リポジトリ接続"
       }
     },
     {
-      "selector": "h2[data-view-component],h3[data-view-component],h4[data-view-component]",
+      "selector": "h1[data-view-component],h2[data-view-component],h3[data-view-component],h4[data-view-component]",
       "text": {
         "Public profile": "公開プロフィール",
         "Contributions & activity": "貢献と活動",
@@ -250,7 +263,38 @@
         "Default idle timeout": "デフォルトのアイドルタイムアウト",
         "Default retention period": "デフォルトの保存期間",
         "Host image version preference": "ホストイメージのバージョン設定",
-        "Region": "地域"
+        "Region": "地域",
+        "Packages permissions": "パッケージの権限",
+        "Usage": "使用方法",
+        "Features": "特徴",
+        "Privacy": "プライバシー",
+        "Visibility": "可視性",
+        "Get Copilot from an organization": " 組織からCopilotを入手する",
+        "Copilot cloud agent": "Copilotクラウドエージェント",
+        "Pages": "ページ",
+        "There are no verified domains.": "確認済みのドメインはありません",
+        "Saved replies": "保存した返信",
+        "Add a saved reply": "保存した返信を追加する",
+        "Code security": "コードのセキュリティ",
+        "User": "ユーザー",
+        "Applications": "アプリケーション",
+        "No installed GitHub Apps": "インストール済みのGitHubアプリはありません",
+        "Scheduled reminders": "予定されたリマインダー",
+        "Security log": "セキュリティログ",
+        "Sponsorship log": "スポンサーログ",
+        "No sponsorship activity in this time period": "この期間中にスポンサー活動はありませんでした",
+        "GitHub Apps": "GitHubアプリ",
+        "No GitHub Apps": "まだGitHubアプリはありません",
+        "OAuth Apps": "OAuthアプリ",
+        "No OAuth apps": "まだOAuthアプリはありません",
+        "No fine-grained tokens created": "細分化されたトークンは作成されませんでした",
+        "Personal access tokens (classic)": "個人用アクセストークン（クラシック）",
+        "Access": "アクセス",
+        "Code, planning, and automation": "コード・計画・自動化",
+        "Security": "セキュリティ",
+        "Integrations": "連携機能",
+        "Archives": "アーカイブ",
+        "email settings": "メール設定"
       }
     },
     {
@@ -288,7 +332,12 @@
         "Backup email address": "予備のメールアドレス",
         "Limit to existing users": "既存のユーザーに限定する",
         "Limit to prior contributors": "過去に貢献したユーザーに限定する",
-        "Limit to repository collaborators": "リポジトリの共同作業者に限定する"
+        "Limit to repository collaborators": "リポジトリの共同作業者に限定する",
+        "Inherit access from source repository": "ソースリポジトリからアクセス権を継承する",
+        "Saved reply title": "保存した返信の件名",
+        "Automatically enable for new public repositories": "新しい公開リポジトリに対して自動的に有効にする",
+        "Automatically enable for new repositories": " 新しいリポジトリに対して自動的に有効にする",
+        "Profile picture": "プロフィール画像"
       }
     },
     {
@@ -298,7 +347,93 @@
         "Create new...": "新規作成",
         "All issues": "すべての問題",
         "All pull requests": "すべてのプルリクエスト",
-        "All repositories": "すべてのリポジトリ"
+        "All repositories": "すべてのリポジトリ",
+        "Open user navigation menu": "ナビゲーションメニューを開く"
+      }
+    },
+    {
+      "selector": "[data-component=\"Tooltip\"] > span",
+      "text": {
+        "You have no unread notifications": "未読の通知はありません"
+      }
+    },
+    {
+      "selector": ".note",
+      "text": {
+        "\n                    Your name may appear around GitHub where you contribute or are mentioned.\n                    You can remove it at any time.\n           ": "GitHub上で、あなたが貢献した場所や言及された場所などに、あなたの名前が表示される場合があります。名前はいつでも削除できます。",
+        "\n                  Other users will see the time difference from their local time.\n                ": "他のユーザーには、自分の現地時間との時差が表示されます",
+        "Enabling this will hide your contributions and activity from your GitHub profile and from social features like\n            followers, stars, feeds, leaderboards and releases.": "この機能を有効にすると、GitHubプロフィールや、フォロワー、スター、フィード、リーダーボード、リリースなどのソーシャル機能から、あなたの投稿やアクティビティが表示されなくなります。",
+        "Your achievements will be shown on your profile.": "あなたの実績はプロフィールに表示されます",
+        "You can manage verified \n                        email addresses in your\n                        ": "認証済みのメールアドレスを管理できます"
+      }
+    },
+    {
+      "selector": "option",
+      "text": {
+        "Select a verified email to display": "表示するメールアドレスを選択してください"
+      }
+    },
+    {
+      "selector": "[data-component=\"text\"]",
+      "text": {
+        "Fork": "フォーク",
+        "Watch": "ウォッチ",
+        "Unwatch": "ウォッチを解除",
+        "Stop ignoring": "無視を解除",
+        "Branches": "ブランチ",
+        "Tags": "タグ"
+      }
+    },
+    { "selector": "[data-component=\"text\"] > span", "text": { "Star": "スター" } },
+    {
+      "selector": ".RefSelectorAnchoredOverlay-module__RefSelectorText__w_fmP",
+      "text": {
+        "main": "メイン"
+      }
+    },
+    {
+      "selector": "[data-component=\"Heading\"]",
+      "text": {
+        "Switch branches/tags": "ブランチ/タグを切り替える",
+        "Languages": "言語",
+        "Suggested workflows": "おすすめのワークフロー"
+      }
+    },
+    {
+      "selector": "[data-component=\"Label\"]",
+      "text": {
+        "default": "デフォルト"
+      }
+    },
+    {
+      "selector": ".prc-Link-Link-9ZwDx",
+      "text": {
+        "default": "デフォルト",
+        "stars": "スター",
+        "Releases": "リリース",
+        "Packages": "パッケージ",
+        "Contributors": "貢献者"
+      }
+    },
+    {
+      "selector": ".SidebarReleases-module__emptyState__FLoIQ, .SidebarPackages-module__emptyState__VLxSU > span",
+      "text": {
+        "No releases published": "公開されたリリースはありません",
+        "No packages published": "公開されているパッケージはありません"
+      }
+    },
+    {
+      "selector": ".prc-Text-Text-9mHv3",
+      "text": {
+        "Based on your tech stack": "あなたのの技術スタックに基づき"
+      }
+    },
+    {
+      "selector": ".prc-Link-Link-9ZwDx",
+      "text": {
+        "Create a new release": "リリースを新規作成",
+        "Publish your first package": "初めてのパッケージを公開する",
+        "More workflows": "もっと見る"
       }
     }
   ]
